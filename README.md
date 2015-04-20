@@ -46,7 +46,9 @@ Write a method `to_roman` that when passed an integer between 1 and 3000 returns
 
 In other words, `to_roman(4)` should return the string `'IIII'`.
 
-Make sure to test your method by passing it several inputs whose results you know. Test some simple numbers like `to_roman(1)` and more complicated numbers like `to_roman(1646)`. This serves as a good sanity check.
+We'll need to test if our code works. You'll find a test file in the source directory called `roman_numerals_spec.rb`. This test file uses `rspec`, so you can run your tests with `rspec roman_numerals_spec.rb`. Go ahead and run it now, the tests should fail since you haven't done any work yet.
+
+Don't just rely on the existing tests. You'll need to write tests for several different inputs whose results you know. Test some simple numbers like `to_roman(1)` and more complicated numbers like `to_roman(1646)`. This will serve as a good sanity check. If you find a bug in your code, make sure you write a test that _would_ have caught it. As the saying goes, "never fix the same bug twice."
 
 Hint: Use the integer division `/` and modulus `%` methods.
 
@@ -54,19 +56,7 @@ Hint: Use the integer division `/` and modulus `%` methods.
 
 Eventually, someone thought it would be terribly clever if putting a smaller number before a larger one meant you had to subtract the smaller one. As a result of this development, you must now suffer.
 
-Rewrite your previous method to return the new-style Roman numerals so when someone calls `to_roman(4)`, it should return the string `'IV'`. You might want to run a script like this to make sure your program is working as intended:
-
-```ruby
-puts "My totally sweet testing script"
-puts ""
-puts "input | expected | actual"
-puts "------|----------|-------"
-puts "4     | IV       | #{to_roman(4)}"
-puts "9     | IX       | #{to_roman(9)}"
-puts "13    | XIII     | #{to_roman(13)}"
-puts "1453  | MCDLIII  | #{to_roman(1453)}"
-puts "1646  | MDCXLVI  | #{to_roman(1646)}"
-```
+Rewrite your previous method to return the new-style Roman numerals so when someone calls `to_roman(4)`, it should return the string `'IV'`. You'll probably have to change your tests now, since the rules have changed. You'll want to add new tests, too. A handy table of Arabic-to-Roman numerals is below, that might be useful.
 
 #### Examples
 
@@ -90,5 +80,3 @@ What else? This is a useful exercise in understanding the relationship between h
 For example, if we're counting people as they walk into a room by marking something on a piece of paper, Arabic numerals are a terrible representation. That'd be like trying to go for a hike and using a political map as a guide.
 
 Instead, we opt for using [tally marks](http://en.wikipedia.org/wiki/Tally_marks) to count.
-
-##Resources
