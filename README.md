@@ -114,14 +114,12 @@ We'll need to write new tests that describe the new expectations for our method.
 Develop your modern Roman numerals test suite, writing and passing one test at a time until your convinced that your method can convert any number from 1 to 3000 to both old and modern Roman numerals.
 
 
-##Optimize Your Learning
+## Conclusion
+This challenge is a useful exercise in understanding the relationship between how we represent our data and the actions we want to perform on it—a dynamic you'll see at play in almost every piece of software you write.  How did we decide to represent the relationship between a Roman numeral and its Arabic number equivalent (e.g., X to 10)?  Was it easy to map from one to the other?  Were all the mappings organized together?  Did our representation of the relationship make it easier or harder when it came time to switch to modern Roman numerals?
 
-Reflect on the pros and cons of each representation. Imagine you're an engineer building a system for people to manipulate numbers and you have two proposals before you: use Roman numerals or use the [Arabic numerals](http://en.wikipedia.org/wiki/Arabic_numerals) we use today. How do you decide and why?
+### More on Data Representations
+Reflect on the pros and cons of Arabic numbers and Roman numerals. Imagine we're engineers building a system for people to manipulate numbers and we have two proposals: use Roman numerals or use [Arabic numbers](http://en.wikipedia.org/wiki/Arabic_numerals). How do we decide and why?
 
-What benefits do Arabic numerals have over Roman numerals as a way to represent numbers? For example, with Arabic numerals we have an obvious way to represent 0. Arabic numerals also typically require fewer characters to represent the same number, e.g., "3111" vs "MMMCXI".
+What benefits do Arabic numerals have over Roman numerals as a way to represent numbers? For example, with Arabic numerals we have an obvious way to represent 0. Arabic numerals also typically require fewer characters to represent the same number (e.g., "3111" vs "MMMCXI"). What else? 
 
-What else? This is a useful exercise in understanding the relationship between how you represent your data and the actions you want to perform on your data—a dynamic you'll see at play in almost every piece of software you write.
-
-For example, if we're counting people as they walk into a room by marking something on a piece of paper, Arabic numerals are a terrible representation. That'd be like trying to go for a hike and using a political map as a guide.
-
-Instead, we opt for using [tally marks](http://en.wikipedia.org/wiki/Tally_marks) to count.
+For example, if we're counting people as they walk into a room by marking something on a piece of paper, Arabic numerals are a terrible representation. That'd be like trying to go for a hike and using a political map as a guide.  Would Roman numerals be any better?  An option more appropriate for the task might be [tally marks](http://en.wikipedia.org/wiki/Tally_marks).
