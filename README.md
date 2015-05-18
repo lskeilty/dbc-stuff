@@ -11,6 +11,10 @@ At Dev Bootcamp we take a test-driven approach to development.  Before we write 
 
 With this approach, we start simple.  The first test we have for converting an Arabic number to a Roman numeral is converting 1 to I.  Then we make things a little harder; we'll convert 4.  From there, maybe we'll move on to converting 5.  We'll continue with this step-by-step approach until we can convert any Arabic number to its Roman numeral equivalent.
 
+We'll be using RSpec for testing.  The files containing our tests will be located in the `spec/` directory.  For this challenge, we only have one test file:  `spec/roman_numerals_spec.rb`.
+
+To run our tests from the command line, we simply need to navigate to our application's root directory and run the `rspec` command.  This command will look for a `spec/` directory.  It will look at each of the files in the `spec/` directory and run any file whose filename ends in *_spec.rb*.
+
 ### Roman Numerals as Representation
 Has anyone ever seen a 5? Not a symbol we write on a piece of paper or print to a screen, but an actual, honest-to-goodness 5?  Of course not. You've seen things that somehow embody five: five apples, five fingers, five weekdays on the calendar, a scrap of paper with *5* written on it, and so forth.
 
