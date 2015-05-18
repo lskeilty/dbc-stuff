@@ -15,6 +15,9 @@ We'll be using RSpec for testing.  The files containing our tests will be locate
 
 To run our tests from the command line, we simply need to navigate to our application's root directory and run the `rspec` command.  This command will look for a `spec/` directory.  It will look at each of the files in the `spec/` directory and run any file whose filename ends in *_spec.rb*.
 
+### Refactoring
+Undoubtedly, as we code, we'll see opportunities to refactor.  Are we beginning to repeat ourselves?  Is there a bit of logic that could exist in its own method so that each method is responsible for only one thing?  When we refactor code, we can accidentally break already working code. How do we know if we break our code?  Our tests can help us.  We'll want to get into the habit of refactoring only when all of our tests are passing.  Passing tests tell us that our code works.  If our tests continue to pass during and after refactoring, we can be sure that we haven't broken anything.
+
 ### Roman Numerals as Representation
 Has anyone ever seen a 5? Not a symbol we write on a piece of paper or print to a screen, but an actual, honest-to-goodness 5?  Of course not. You've seen things that somehow embody five: five apples, five fingers, five weekdays on the calendar, a scrap of paper with *5* written on it, and so forth.
 
