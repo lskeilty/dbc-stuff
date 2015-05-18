@@ -43,7 +43,7 @@ Think of all the ways to represent the integer 5.  Symbols like *5*, *five*, *V*
 
 In the early days of Roman numerals, the Romans built their numerals from the individual characters in Table 1 (e.g., I, V, X, etc.) written largest value to smallest from left to right.  To determine the value of any numeral, they used straight addition.  I is equivalent to 1.  II is equivalent to 1 + 1, or 2.  VIIII is equivalent to 5 + 1 + 1 + 1 + 1, or 9.
 
-We are going to begin writing a method `convert_to_roman`.  When passed an integer between 1 and 3000, this method returns a string containing the proper old Roman numeral.  In other words, `convert_to_roman(4)` should return the string `'IIII'`.
+We are going to begin writing a method `convert_to_roman`.  When passed an integer between 1 and 3000, this method returns a string containing the proper old Roman numeral.  In other words, `convert_to_roman(4)` should return the string `'IIII'`.  Don't worry about checking whether or not the number passed to the method is between 1 and 3000; it's just that at some point, Roman numerals become unwieldy.
 
 We'll need to test that our code works. We have a test file `spec/roman_numerals_spec.rb`.  This file contains two tests which have been provided for us.  One test will let us know whether we're correctly converting 1. The second test will let us know if we're correctly converting 4.
 
@@ -57,7 +57,7 @@ After the test for converting 1 is passing, let's pass the test for converting 4
 
 The two provided tests were enough to get us started, but they don't cover all the behavior that we expect from our method.  Can our method convert 5, 6, 10, etc.?  We'll need to write and pass tests that confirm our method is working as intended.
 
-Update the file `spec/roman_numerals_spec.rb` with a new test for converting the number 5.  Then, make the next this new test pass.  Once the test passes, write the next test.  Which Arabic number would be a good candidate to check next?
+Update the file `spec/roman_numerals_spec.rb` with a new test for converting the number 5.  Then, make this new test pass.  Once the test passes, write the next test.  Which Arabic number would be a good candidate to check next?
 
 Repeat the cycle of writing and passing tests until we're confident that our method will convert any number from 1 to 3000.
 
@@ -107,7 +107,7 @@ convert_to_roman(4, { modern: true })
 
 *Figure 2*.  The method returns either old or modern Roman numerals.
 
-When we call our method, we can specify that we want to get modern Roman numerals.  To get modern Roman numerals, we pass the Arabic number and also an option hash with a `:modern` key with the value `true` (see Figure 2).
+When we call our method, we can specify that we want to get modern Roman numerals.  To get modern Roman numerals, we pass the Arabic number and also a hash with a `:modern` key with the value `true` (see Figure 2).
 
 ```ruby
 describe 'modern Roman numerals' do
