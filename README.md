@@ -9,7 +9,7 @@ Determining how to take any number (e.g., 1, 58, 1948, etc.) and convert it into
 ### Test-first Approach
 At Dev Bootcamp we take a test-driven approach to development.  Before we write code, we're going to write tests that will tell us if the code we do write is operating the way that we expect it to.  
 
-With this approach, we start simple.  The first test we have for converting an Arabic number to a Roman numeral is converting 1 to I.  Then we make things a little harder; we'll convert 3 to III.  From there, maybe we'll move on to converting 5 to V.  We'll continue with this step-by-step approach until we can convert any Arabic number to its Roman numeral equivalent.
+With this approach, we start simple.  The first test we have for converting an Arabic number to a Roman numeral is converting 1 to I.  Then we make things a little harder; we'll convert 4.  From there, maybe we'll move on to converting 5.  We'll continue with this step-by-step approach until we can convert any Arabic number to its Roman numeral equivalent.
 
 ### Roman Numerals as Representation
 Has anyone ever seen a 5? Not a symbol we write on a piece of paper or print to a screen, but an actual, honest-to-goodness 5?  Of course not. You've seen things that somehow embody five: five apples, five fingers, five weekdays on the calendar, a scrap of paper with *5* written on it, and so forth.

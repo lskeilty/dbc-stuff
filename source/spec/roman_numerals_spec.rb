@@ -6,8 +6,8 @@ describe 'converting an Arabic number to a Roman numeral' do
       expect(convert_to_roman(1)).to eq("I")
     end
 
-    it 'should convert 3 to III' do
-      expect(convert_to_roman(3)).to eq("III")
+    it 'should convert 4 to IIII' do
+      expect(convert_to_roman(4)).to eq("IIII")
     end
   end
 
