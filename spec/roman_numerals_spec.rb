@@ -16,7 +16,7 @@ describe 'converting an Arabic number to a Roman numeral' do
   end
 
   describe 'modern Roman numerals' do
-    # Release 2 ...
+    # Release 3 ...
     # add tests for modern roman numerals here
 
   end
