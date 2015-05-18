@@ -109,9 +109,22 @@ convert_to_roman(4, { modern: true })
 
 When we call our method, we can specify that we want to get modern Roman numerals.  To get modern Roman numerals, we pass the Arabic number and also an option hash with a `:modern` key with the value `true` (see Figure 2).
 
-We'll need to write new tests that describe the new expectations for our method.  Can we convert 1 to modern Roman numerals?  Can we convert 4 to modern Roman numerals?  Which numbers would it be necessary to test (see Table 2 for examples)?
+```ruby
+describe 'modern Roman numerals' do
+  # Release 3 ...
+  # add tests for modern roman numerals here
 
-Develop your modern Roman numerals test suite, writing and passing one test at a time until your convinced that your method can convert any number from 1 to 3000 to both old and modern Roman numerals.
+  it 'converts 1 to I' do
+    expect(convert_to_roman(1, { modern: true })).to eq "I"
+  end
+end
+```
+*Figure 3*.  Example test for returning modern Roman numerals.
+
+
+We'll need to write new tests that describe the new expectations for our method.  Can we convert 1 to modern Roman numerals (see Figure 3)?  Can we convert 4 to modern Roman numerals?  Which numbers would it be necessary to test (see Table 2 for examples)?
+
+Develop your modern Roman numerals test suite, writing and passing one test at a time until you're convinced that your method can convert any number from 1 to 3000 to both old and modern Roman numerals.
 
 
 ## Conclusion
