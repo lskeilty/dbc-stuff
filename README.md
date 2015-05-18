@@ -23,34 +23,44 @@ Think of all the ways to represent the integer 5.  Symbols like *5*, *five*, *V*
 
 ##Releases
 
-###Release 0 : Old-school Roman numerals
+###Release 0 : Old Roman Numerals
 
-For reference, these are the building blocks for how we encode numbers with Roman numerals:
+| Arabic Number  | Roman Numeral |
+| -------------- | ------------- |
+| 1              | I             |
+| 5              | V             |
+| 10             | X             |
+| 50             | L             |
+| 100            | C             |
+| 500            | D             |
+| 1000           | M             |
 
-| Roman Numeral | Arabic Numeral |
-| ------------- | -------------- |
-| I             | 1              |
-| V             | 5              |
-| X             | 10             |
-| L             | 50             |
-| C             | 100            |
-| D             | 500            |
-| M             | 1000           |
+*Table 1*. Arabic number and their old Roman numeral equivalents.
 
 
-In the early days of Roman numerals, the Roman's didn't bother with any of this new-fangled subtraction 'IX' nonsense. No sir, it was straight addition, biggest to littlest–so 9 was written 'VIIII' and so on.
+In the early days of Roman numerals, the Romans built their numerals from the individual characters in Table 1 (e.g., I, V, X, etc.) written largest value to smallest from left to right.  To determine the value of any numeral, they used straight addition.  I is equivalent to 1.  II is equivalent to 1 + 1, or 2.  VIIII is equivalent to 5 + 1 + 1 + 1 + 1, or 9.
 
-Write a method `to_roman` that when passed an integer between 1 and 3000 returns a string containing the proper old-school Roman numeral.
+We are going to begin writing a method `convert_to_roman`.  When passed an integer between 1 and 3000, this method returns a string containing the proper old Roman numeral.  In other words, `convert_to_roman(4)` should return the string `'IIII'`.
 
-In other words, `to_roman(4)` should return the string `'IIII'`.
+We'll need to test that our code works. We have a test file `spec/roman_numerals_spec.rb`.  This file contains two tests which have been provided for us.  One test will let us know whether we're correctly converting 1. The second test will let us know if we're correctly converting 4.
 
-We'll need to test if our code works. You'll find a test file in the source directory called `roman_numerals_spec.rb`. This test file uses `rspec`, so you can run your tests with `rspec roman_numerals_spec.rb`. Go ahead and run it now, the tests should fail since you haven't done any work yet.
+Run the test suite (see *Summary* for instructions).  The tests should fail since we haven't done any work yet.
 
-Don't just rely on the existing tests. You'll need to write tests for several different inputs whose results you know. Test some simple numbers like `to_roman(1)` and more complicated numbers like `to_roman(1646)`. This will serve as a good sanity check. If you find a bug in your code, make sure you write a test that _would_ have caught it. As the saying goes, "never fix the same bug twice."
+Let's start simple and make the test for converting 1 pass.  To do so, write the least amount of code as possible—maybe your method just returns a hard-coded string.
 
-Hint: Use the integer division `/` and modulus `%` methods.
+After the test for converting 1 is passing, let's pass the test for converting 4.  Again, write the least amount of code as possible.
 
-###Release 1 : Modern Roman numerals
+### Release 1: Write New Tests
+
+The two provided tests were enough to get us started, but they don't cover all the behavior that we expect from our method.  Can our method convert 5, 6, 10, etc.?  We'll need to write and pass tests that confirm our method is working as intended.
+
+Update the file `spec/roman_numerals_spec.rb` with a new test for converting the number 5.  Then, make the next this new test pass.  Once the test passes, write the next test.  Which Arabic number would be a good candidate to check next?
+
+Repeat the cycle of writing and passing tests until we're confident that our method will convert any number from 1 to 3000.
+
+*Hint*: It might be useful to use the integer division `/` and modulus `%` methods.
+
+### Release 2: Modern Roman numerals
 
 Eventually, someone thought it would be terribly clever if putting a smaller number before a larger one meant you had to subtract the smaller one. As a result of this development, you must now suffer.
 
