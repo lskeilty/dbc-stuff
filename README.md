@@ -2,7 +2,19 @@
 
 ##Summary
 
-We're going to write a method that converts an integer to its Roman numeral equivalent, i.e., 476 => 'CDLXXVI'.
+We're going to write a method that converts an integer to its Roman numeral equivalent. In other words, if we give our method the Arabic number 476, our method will return the Roman numeral CDLXXVI.
+
+Determining how to take any number (e.g., 1, 58, 1948, etc.) and convert it into its Roman numeral equivalent is our main focus.  But, in solving this problem, we'll have the opportunity to practice developing with a test-first approach.  And, as always, we should pay attention to the quality of the code that we write.  Are we writing methods that do only one thing?  Is our code DRY—as in *don't repeat yourself*? Are we giving our variables descriptive names?  We need to be very deliberate with our code to make it as easy to read as possible; make intentional decisions.
+
+### Roman Numerals as Representation
+Has anyone ever seen a 5? Not a symbol we write on a piece of paper or print to a screen, but an actual, honest-to-goodness 5?  Of course not. You've seen things that somehow embody five: five apples, five fingers, five weekdays on the calendar, a scrap of paper with *5* written on it, and so forth.
+
+Think of all the ways to represent the integer 5.  Symbols like *5*, *five*, *V*, and *IIIII* all ways to represent 5. If we asked a three-year-old, they might hold up the five fingers on their hand or pull out five pennies from their pocket. Computers encode numbers their own way, as a sequence of 0s and 1s called [binary](http://en.wikipedia.org/wiki/Binary_number).  [The map is not the territory](http://en.wikipedia.org/wiki/Map%E2%80%93territory_relation), as they say.
+
+
+##Releases
+
+###Release 0 : Old-school Roman numerals
 
 For reference, these are the building blocks for how we encode numbers with Roman numerals:
 
@@ -16,20 +28,6 @@ For reference, these are the building blocks for how we encode numbers with Roma
 | D             | 500            |
 | M             | 1000           |
 
-### Roman Numerals as Representation
-
-Have you ever seen a 5? I don't mean the symbol we write on a piece of paper or print to a screen, but an actual, honest-to-goodness 5?
-
-Of course not. You've seen things that somehow embody five: five apples, five fingers, five weekdays on the calendar, a scrap of paper with "5" written on it, and so forth. Think of all the ways you can represent the integer 5.
-
-Symbols like 5, "five", V, and IIIII are one way. If you asked a three-year-old, they might hold up the five fingers on their hand or pull out five pennies from their pocket. Computers encode numbers as a sequence of 0s and 1s called [binary](http://en.wikipedia.org/wiki/Binary_number).
-
-[The map is not the territory](http://en.wikipedia.org/wiki/Map%E2%80%93territory_relation), as they say.
-
-
-##Releases
-
-###Release 0 : Old-school Roman numerals
 
 In the early days of Roman numerals, the Roman's didn't bother with any of this new-fangled subtraction 'IX' nonsense. No sir, it was straight addition, biggest to littlest–so 9 was written 'VIIII' and so on.
 
