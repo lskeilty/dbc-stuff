@@ -1,14 +1,5 @@
 # Roman Numerals
 
-##Learning Competencies
-
-* Use methods to modularize code
-* Use data structures to map relationships
-* Write small, concise methods
-* Write DRY code
-* Use effective naming conventions
-
-
 ##Summary
 
 We're going to write a method that converts an integer to its Roman numeral equivalent, i.e., 476 => 'CDLXXVI'.
