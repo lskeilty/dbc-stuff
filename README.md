@@ -63,7 +63,7 @@ Repeat the cycle of writing and passing tests until we're confident that our met
 
 *Hint*: It might be useful to use the integer division `/` and modulus `%` methods.
 
-### Release 2: Options for Modern Roman Numerals
+### Release 2:  An Option for Modern Roman Numerals
 
 | Arabic Number | Roman Numeral |
 | ------------- | ------------- |
@@ -77,37 +77,33 @@ Repeat the cycle of writing and passing tests until we're confident that our met
 
 *Table 2*.  Modern Roman numeral examples.
 
-Eventually, the Romans changed systems.  Now, putting a smaller numeral before a larger one meant you had to subtract the smaller one.  So, instead of 4 being represented by 1 + 1 + 1 + 1, it was now 5 - 1, or IV.  4 was not the only value affected (see Table 2 for more examples).
+Eventually, the Romans changed systems.  Putting a smaller numeral before a larger one meant subtracting the smaller one from the larger.  So, instead of four being represented by IIII, it was now IV (i.e., 5 - 1).  Four was not the only value affected, and more examples are shown in Table 2.
 
-We're going to update our method so that it will give us back either old Roman numerals or modern Roman numerals.  As we continue learning Ruby, we'll frequently see a pattern of allowing users to tweak the behaviors of methods by passing an optional *options hash*.
+The default behavior for our method will continue to be returning old Roman numerals, but we'll allow users to specify that they want modern Roman numerals instead.  Users will specify that they want modern Roman numerals by passing an optional second argument.  Begin by just updating the method to accept an optional second argument that defaults to false (see Figure 1).  Then, since we've modified our code by adding this optional second argument, run our tests to make sure that we haven't broken our code for returning old Roman numerals.
 
-In our method, we're going to allow users to specify that they want modern Roman numerals by passing in an options hash like `{ modern: true }`, which has a `:modern` key with a value of `true`.
 
 ```ruby
-def convert_to_roman(arabic_number, options = {})
+def convert_to_roman(arabic_number, modern = false)
   # code ...
 end
 ```
+*Figure 1*.  Updated method definition which accepts an optional argument.
 
-*Figure 1*.  Updated method definition which accepts an options hash.
-
-Let's start by updating our method definition to accept a second argument that defaults to an empty hash (see Figure 1).
-
-We've modified our code by adding this optional second argument.  Let's run our tests to make sure that we haven't broken our code for returning old Roman numerals.
 
 ### Release 3: Return Modern Roman Numerals
+If users want old Roman numerals, they can continue calling the method with just the number to convert, and `modern` will default to `false`.  But if users want modern Roman numerals, they can call the method and provide two arguments:  the number to convert and a truthy value.  This is demonstrated in Figure 2.
 
 ```ruby
 convert_to_roman(4)
- => "IIII"
- 
-convert_to_roman(4, { modern: true })
- => "IV"
+# => "IIII"
+
+convert_to_roman(4, true)
+# => "IV"
 ```
+*Figure 2*.  Returning old and modern Roman numerals.
 
-*Figure 2*.  The method returns either old or modern Roman numerals.
 
-When we call our method, we can specify that we want to get modern Roman numerals.  To get modern Roman numerals, we pass the Arabic number and also a hash with a `:modern` key with the value `true` (see Figure 2).
+Update the body of the method to return either old or modern Roman numerals.  As we update our method we'll need to write tests that describe the new expectations for our method.  Can we convert 1 to modern Roman numerals?  Can we convert 4 to modern Roman numerals?  And so on.  See Figure 3 for some example tests.  Which numbers would it be most beneficial to test?
 
 ```ruby
 describe 'modern Roman numerals' do
@@ -115,14 +111,16 @@ describe 'modern Roman numerals' do
   # add tests for modern roman numerals here
 
   it 'converts 1 to I' do
-    expect(convert_to_roman(1, { modern: true })).to eq "I"
+    expect(convert_to_roman(1, true)).to eq "I"
+  end
+  
+  it 'converts 4 to IV' do
+    expect(convert_to_roman(4, true)).to eq "IV"
   end
 end
 ```
 *Figure 3*.  Example test for returning modern Roman numerals.
 
-
-We'll need to write new tests that describe the new expectations for our method.  Can we convert 1 to modern Roman numerals (see Figure 3)?  Can we convert 4 to modern Roman numerals?  Which numbers would it be necessary to test (see Table 2 for examples)?
 
 Develop your modern Roman numerals test suite, writing and passing one test at a time until you're convinced that your method can convert any number from 1 to 3000 to both old and modern Roman numerals.
 
