@@ -1,13 +1,14 @@
 require_relative '../roman_numerals'
 
 describe 'converting an Arabic number to a Roman numeral' do
+
   describe 'old Roman numerals' do
     it 'converts 1 to I' do
       expect(convert_to_roman(1)).to eq "I"
     end
 
     it 'converts 4 to IIII' do
-      expect(convert_to_roman(4)).to eq "IIII"
+      expect(convert_to_roman(4)).to eq "IV"
     end
 
     it 'converts 5 to V' do
@@ -52,6 +53,15 @@ describe 'converting an Arabic number to a Roman numeral' do
     it 'converts 44 to XLIV' do
       expect(convert_to_roman(44, true)).to eq "XLIV"
     end
+#testing the number 49
+    it 'converts 49 to XCIX' do
+      expect(convert_to_roman(49, true)).to eq "XLIX"
+    end
+
+#testing the number 94
+    it 'converts 94 to XCIX' do
+      expect(convert_to_roman(94, true)).to eq "XCIV"
+    end
 
     it 'converts 99 to XCIX' do
       expect(convert_to_roman(99, true)).to eq "XCIX"
@@ -59,6 +69,11 @@ describe 'converting an Arabic number to a Roman numeral' do
 
     it 'converts 400 to CD' do
       expect(convert_to_roman(400, true)).to eq "CD"
+    end
+
+#testing the number 499
+    it 'converts 499 to XCIX' do
+      expect(convert_to_roman(499, true)).to eq "CDXCIX"
     end
 
     it 'converts 944 to CMXLIV' do

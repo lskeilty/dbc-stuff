@@ -1,61 +1,31 @@
 def convert_to_roman(arabic_number, modern = false)
+	 roman_array = [
+ 	[1000, "M"],
+ 	[900, "CM"], #added 900
+ 	[500, "D"],
+ 	[400, "CD"], #added 400
+ 	[100, "C"],
+ 	[90, "XC"], #added 90
+ 	[50, "L"],
+ 	[40, "XL"], #added 40
+ 	[10, "X"],
+ 	[9, "IX"], #added 9
+ 	[5, "V"],
+ 	[4, "IV"], #added 4
+  [1, "I"],
+  ]
 	roman_numeral = ""
-	if arabic_number >= 1000
-		roman_numeral+="M"*(arabic_number/1000)
-		arabic_number = arabic_number % 1000
-	end
-	if arabic_number >= 500
-		if arabic_number >= 900 && modern == true
-			roman_numeral += "CM"
-			arabic_number = arabic_number - 900
-		else
-			roman_numeral+="D"*(arabic_number/500)
-			arabic_number = arabic_number % 500
-		end
 
-		roman_numeral+="D"*(arabic_number/500)
-		arabic_number = arabic_number % 500
-	end
-	if arabic_number >= 100
-		if arabic_number >= 400 && modern == true
-			roman_numeral += "CD"
-			arabic_number = arabic_number - 400
-		else
-			roman_numeral+="C"*(arabic_number/100)
-			arabic_number = arabic_number % 100
+	if modern == true
+		roman_array.each do |arb_arr, rom_arr|
+		roman_numeral += rom_arr * (arabic_number / arb_arr)
+		arabic_number = arabic_number % arb_arr
 		end
 	end
-	if arabic_number >= 50
-		if arabic_number >= 90 && modern == true
-			roman_numeral += "XC"
-			arabic_number = arabic_number - 90
-		else
-			roman_numeral+="L"*(arabic_number/50)
-			arabic_number = arabic_number % 50
-		end
+
+	roman_array.each do |arb_num, rom_num|
+		roman_numeral += rom_num * (arabic_number / arb_num)
+		arabic_number -= arb_num * (arabic_number / arb_num)
 	end
-	if arabic_number >= 10
-		if arabic_number >= 40 && modern == true
-			roman_numeral += "XL"
-			arabic_number = arabic_number - 40
-		else
-			roman_numeral+="X"*(arabic_number/10)
-			arabic_number = arabic_number % 10
-		end
-	end
-	if arabic_number >= 5
-		if arabic_number == 9 && modern == true
-			roman_numeral += "IX"
-			arabic_number = arabic_number - 9
-		else
-			roman_numeral+="V"*(arabic_number/5)
-			arabic_number = arabic_number % 5
-		end
-	end
-	if arabic_number == 4 && modern == true
-		roman_numeral += "IV"
-	else
-		roman_numeral += "I"*arabic_number
-	end
-	roman_numeral
+roman_numeral
 end
